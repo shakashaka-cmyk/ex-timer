@@ -88,6 +88,20 @@ function renderTimeFromElapsed() {
 }
 
 
+function autostart() {
+
+  if (intervalId !== null) return;
+
+  if (mode === "idle") {
+    mode = "countdown";
+  } else if (mode === "countup") {
+    mode = "countup";
+  }
+  
+  updateUI();
+  startTimer();
+};
+
 startB.addEventListener("click", function () {
 
   if (intervalId !== null) return;
@@ -141,3 +155,4 @@ resetB.addEventListener("click", function() {
 
 updateUI();
 renderTimeFromElapsed();
+autostart();
