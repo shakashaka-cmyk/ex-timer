@@ -31,9 +31,10 @@ function startTimer() {
             elapsed = 60000;
             updateUI();
             startTimer();
-            }
-        }, 10)
-    }, 10000);
+                }
+            }, 10000)
+        }
+    }, 10};
 }
 function updateUI() {
     if (mode === "idle" || mode === "countdown"){
