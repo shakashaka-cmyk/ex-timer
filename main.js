@@ -31,6 +31,7 @@ function startTimer() {
             elapsed = 60000;
             updateUI();
             startTimer();
+            }
         }
     }, 10000);
 }
