@@ -24,10 +24,16 @@ function startTimer() {
             intervalId = null;
             mode = "confirm";
             updateUI();
+            //自動進行
+           setTimeout(() => {
+        if (mode === "confirm" && intervalId === null) {
+            mode = "countup";
+            elapsed = 60000;
+            updateUI();
+            startTimer();
         }
-    }, 10);
+    }, 10000);
 }
-
 function updateUI() {
     if (mode === "idle" || mode === "countdown"){
         startB.style.display = "inline-block"
