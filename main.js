@@ -32,7 +32,7 @@ function startTimer() {
             updateUI();
             startTimer();
             }
-        }
+        }, 10)
     }, 10000);
 }
 function updateUI() {
