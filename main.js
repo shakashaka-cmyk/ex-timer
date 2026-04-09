@@ -34,7 +34,7 @@ function startTimer() {
                 }
             }, 10000)
         }
-    }, 10};
+    }, 10);
 }
 function updateUI() {
     if (mode === "idle" || mode === "countdown"){
